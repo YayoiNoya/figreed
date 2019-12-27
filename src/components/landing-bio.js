@@ -3,10 +3,6 @@ import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "@emotion/styled"
 
-const Container = styled.div`
-  text-align: center;
-`
-
 const OuterContainer = styled.div`
   display: flex;
   align-items: center;
@@ -15,15 +11,19 @@ const OuterContainer = styled.div`
   height: 78vh;
 `
 
-const Description = styled.p`
-  padding: 0;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
+const Container = styled.div`
+  text-align: center;
 `
 
 const NameHeader = styled.h1`
   font-size: 3.5rem;
-  margin-bottom: 0;
+  padding: 3.5rem;
+`
+
+const Description = styled.p`
+  padding: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
 `
 
 const LandingBio = () => (

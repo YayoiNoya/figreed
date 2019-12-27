@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
 import styled from "@emotion/styled"
 
 import Header from "./header"
@@ -20,6 +21,14 @@ const Content = styled.div`
   padding-top: 0;
 `
 
+const PrivacyLink = styled(Link)`
+
+`
+
+const GitHubLink = styled.a`
+  margin-left: 15px;
+`
+
 const GatsbyLink = styled.a`
   margin-left: 5px;
 `
@@ -27,6 +36,7 @@ const GatsbyLink = styled.a`
 const Footer = styled.footer`
   display: flex;
   justify-content: center;
+  font-size: 0.9rem;
 `
 
 const Layout = ({ children }) => (
@@ -41,17 +51,21 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <div>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>
           <main>{children}</main>
           <Footer>
-            © {new Date().getFullYear()}, Built with
+            <PrivacyLink to="/privacy-policy">プライバシーポリシー</PrivacyLink>
+            <GitHubLink href="https://github.com/YayoiNoya/figreed">GitHub</GitHubLink>
+          </Footer>
+          <Footer>
+            &copy; {new Date().getFullYear()} Figreed. Built with
             {` `}
             <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
           </Footer>
         </Content>
-      </>
+      </div>
     )}
   />
 )
