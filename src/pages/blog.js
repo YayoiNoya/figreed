@@ -19,6 +19,7 @@ const ArticleDate = styled.h5`
 
 const MarkerHeader = styled.h3`
   display: inline;
+  border-bottom: solid 1.6px hsla(0, 0%, 0%, 0.8);
 `
 
 const ReadingTime = styled.h5`
